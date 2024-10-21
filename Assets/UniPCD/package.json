@@ -1,0 +1,11 @@
+{
+    "name": "com.autumn60.unipcd",
+    "version": "0.1.0",
+    "displayName": "UniPCD",
+    "description": "",
+    "unity": "2022.3",
+    "dependencies": {
+    },
+    "keywords": [
+    ]
+}

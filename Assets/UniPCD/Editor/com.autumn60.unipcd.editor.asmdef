@@ -1,0 +1,16 @@
+{
+    "name": "com.autumn60.unipcd.editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:504c7f3d7db29372ebb8d44f9b228a72"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
