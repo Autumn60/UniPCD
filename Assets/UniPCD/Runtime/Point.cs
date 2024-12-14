@@ -1,12 +1,13 @@
 using System;
 using UnityEngine;
+using Unity.Mathematics;
 
 namespace UniPCD
 {
   [Serializable]
-  public class Point
+  public struct Point
   {
-    public Vector3 position;
+    public float3 position;
     public Color32 color;
   }
 }
