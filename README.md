@@ -11,17 +11,5 @@
 
 ## Importing PCD
 
-UniPCD provides two methods of importing .pcd file.
-
-### Editor Window Importer
-
-This method supports modification of imported PCD data.
-
 1. Open the PCDImporter window from `UniPCD` -> `Import .pcd file`.
 2. In the PCDImporter window, click the "Import" button and select .pcd file.
-
-### Scripted Importer
-
-This method DOES NOT support modification of imported PCD data.
-
-1. D&D .pcd file into Project window.
