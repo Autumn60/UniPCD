@@ -1,16 +1,15 @@
 using UnityEngine;
 using UnityEditor;
-using UniPCD.IO;
 using System.IO;
 
 namespace UniPCD.Editor
 {
-  public class PCDEditorWindowImporter : EditorWindow
+  public class PCDImporterEditorWindow : EditorWindow
   {
     [MenuItem("UniPCD/Import .pcd file")]
     public static void ShowWindow()
     {
-      GetWindow<PCDEditorWindowImporter>("PCD Importer");
+      GetWindow<PCDImporterEditorWindow>("PCD Importer");
     }
 
     private void OnGUI()
@@ -22,14 +21,9 @@ namespace UniPCD.Editor
         string path = EditorUtility.OpenFilePanel("Import .pcd file", "", "pcd");
         if (path.Length != 0)
         {
-          if (PCDReader.Read(path, out PCD pcd))
+          if (PCDImporter.Import(path))
           {
             string fileName = Path.GetFileNameWithoutExtension(path);
-            PCDObject pcdObject = ScriptableObject.CreateInstance<PCDObject>();
-            pcdObject.pcd = pcd;
-            AssetDatabase.CreateAsset(pcdObject, $"Assets/{fileName}.asset");
-            AssetDatabase.SaveAssets();
-            AssetDatabase.Refresh();
             Debug.Log($"Imported {fileName}.asset");
           }
           else
